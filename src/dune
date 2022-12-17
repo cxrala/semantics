@@ -1,0 +1,7 @@
+(library
+ (public_name semantics)
+ (inline_tests)
+ (name semantics)
+ (libraries core base cmdliner)
+ (preprocess
+  (pps ppx_inline_test)))

@@ -1,0 +1,34 @@
+lib: [
+  "_build/install/default/lib/semantics/ExpressionL1.ml"
+  "_build/install/default/lib/semantics/META"
+  "_build/install/default/lib/semantics/Semantics.ml"
+  "_build/install/default/lib/semantics/Semantics.mli"
+  "_build/install/default/lib/semantics/Store.ml"
+  "_build/install/default/lib/semantics/Store.mli"
+  "_build/install/default/lib/semantics/dune-package"
+  "_build/install/default/lib/semantics/opam"
+  "_build/install/default/lib/semantics/semantics.a"
+  "_build/install/default/lib/semantics/semantics.cma"
+  "_build/install/default/lib/semantics/semantics.cmi"
+  "_build/install/default/lib/semantics/semantics.cmt"
+  "_build/install/default/lib/semantics/semantics.cmti"
+  "_build/install/default/lib/semantics/semantics.cmx"
+  "_build/install/default/lib/semantics/semantics.cmxa"
+  "_build/install/default/lib/semantics/semantics__.cmi"
+  "_build/install/default/lib/semantics/semantics__.cmt"
+  "_build/install/default/lib/semantics/semantics__.cmx"
+  "_build/install/default/lib/semantics/semantics__.ml"
+  "_build/install/default/lib/semantics/semantics__ExpressionL1.cmi"
+  "_build/install/default/lib/semantics/semantics__ExpressionL1.cmt"
+  "_build/install/default/lib/semantics/semantics__ExpressionL1.cmx"
+  "_build/install/default/lib/semantics/semantics__Store.cmi"
+  "_build/install/default/lib/semantics/semantics__Store.cmt"
+  "_build/install/default/lib/semantics/semantics__Store.cmti"
+  "_build/install/default/lib/semantics/semantics__Store.cmx"
+]
+libexec: [
+  "_build/install/default/lib/semantics/semantics.cmxs"
+]
+bin: [
+  "_build/install/default/bin/semantics"
+]

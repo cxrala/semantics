@@ -1,0 +1,6 @@
+description = ""
+requires = "base cmdliner core ppx_inline_test.runtime-lib"
+archive(byte) = "semantics.cma"
+archive(native) = "semantics.cmxa"
+plugin(byte) = "semantics.cma"
+plugin(native) = "semantics.cmxs"

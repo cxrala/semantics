@@ -1,0 +1,10 @@
+(** @canonical Semantics.Configuration *)
+module Configuration = Semantics__Configuration
+
+
+(** @canonical Semantics.Expression *)
+module Expression = Semantics__Expression
+
+
+(** @canonical Semantics.Store *)
+module Store = Semantics__Store
