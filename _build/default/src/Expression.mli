@@ -1,3 +1,7 @@
+type op = 
+  | Geq
+  | Plus
+
 type t =
   | Integer of int
   | Boolean of bool
@@ -7,4 +11,5 @@ type t =
   | Seq of t * t
   | Deref of Store.loc
   | Assign of Store.loc * t
-  | Op of t * t
+  | Op of t * op * t
+

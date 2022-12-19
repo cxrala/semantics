@@ -1,2 +1,1 @@
-val plus : Configuration.t -> Configuration.t
-val geq : Configuration.t -> Configuration.t
+val reduce : Configuration.t -> Configuration.t option

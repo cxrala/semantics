@@ -1,4 +1,1 @@
-type t = {
-  expression: Expression.t ;
-  store: Store.t
-}
+type t = Expression.t * Store.t

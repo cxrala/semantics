@@ -2,10 +2,10 @@
 # OCAMLPARAM: unset
 # Workspace root:
 # /Users/ameliang/Documents/uk/ac/cam/an639/IB/semantics/semantics
-$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/8y/h181fyp92g76h3klj1gc5svh0000gn/T/dune8dc29d.output 2> /dev/null
+$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/8y/h181fyp92g76h3klj1gc5svh0000gn/T/duned55ce6.output 2> /dev/null
 # Auto-detected concurrency: 12
 # disable binary cache
-$ /Users/ameliang/.opam/default/bin/ocamlc.opt -config > /var/folders/8y/h181fyp92g76h3klj1gc5svh0000gn/T/dune2abc25.output
+$ /Users/ameliang/.opam/default/bin/ocamlc.opt -config > /var/folders/8y/h181fyp92g76h3klj1gc5svh0000gn/T/dune8daac7.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -112,49 +112,3 @@ $ /Users/ameliang/.opam/default/bin/ocamlc.opt -config > /var/folders/8y/h181fyp
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="semantics"' -o src/Semantics.pp.ml --impl src/Semantics.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
-$ (cd _build/default && /Users/ameliang/.opam/default/bin/ocamldep.opt -modules -impl src/Semantics.pp.ml) > _build/default/src/.semantics.objs/Semantics.pp.ml.d
-$ (cd _build/default && /Users/ameliang/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.semantics.objs/byte -I /Users/ameliang/.opam/default/lib/base -I /Users/ameliang/.opam/default/lib/base/base_internalhash_types -I /Users/ameliang/.opam/default/lib/base/caml -I /Users/ameliang/.opam/default/lib/base/md5 -I /Users/ameliang/.opam/default/lib/base/shadow_stdlib -I /Users/ameliang/.opam/default/lib/base_bigstring -I /Users/ameliang/.opam/default/lib/base_quickcheck -I /Users/ameliang/.opam/default/lib/bin_prot -I /Users/ameliang/.opam/default/lib/bin_prot/shape -I /Users/ameliang/.opam/default/lib/cmdliner -I /Users/ameliang/.opam/default/lib/core -I /Users/ameliang/.opam/default/lib/core/error_checking_mutex -I /Users/ameliang/.opam/default/lib/core_kernel -I /Users/ameliang/.opam/default/lib/core_kernel/base_for_tests -I /Users/ameliang/.opam/default/lib/core_kernel/caml_unix -I /Users/ameliang/.opam/default/lib/core_kernel/flags -I /Users/ameliang/.opam/default/lib/core_kernel/version_util -I /Users/ameliang/.opam/default/lib/fieldslib -I /Users/ameliang/.opam/default/lib/jane-street-headers -I /Users/ameliang/.opam/default/lib/ocaml/threads -I /Users/ameliang/.opam/default/lib/parsexp -I /Users/ameliang/.opam/default/lib/ppx_assert/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_bench/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_compare/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_enumerate/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_expect/collector -I /Users/ameliang/.opam/default/lib/ppx_expect/common -I /Users/ameliang/.opam/default/lib/ppx_expect/config -I /Users/ameliang/.opam/default/lib/ppx_expect/config_types -I /Users/ameliang/.opam/default/lib/ppx_hash/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_here/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_inline_test/config -I /Users/ameliang/.opam/default/lib/ppx_inline_test/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_module_timer/runtime -I /Users/ameliang/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/ameliang/.opam/default/lib/sexplib -I /Users/ameliang/.opam/default/lib/sexplib/unix -I /Users/ameliang/.opam/default/lib/sexplib0 -I /Users/ameliang/.opam/default/lib/spawn -I /Users/ameliang/.opam/default/lib/splittable_random -I /Users/ameliang/.opam/default/lib/stdio -I /Users/ameliang/.opam/default/lib/time_now -I /Users/ameliang/.opam/default/lib/timezone -I /Users/ameliang/.opam/default/lib/typerep -I /Users/ameliang/.opam/default/lib/variantslib -intf-suffix .ml -no-alias-deps -opaque -open Semantics__ -o src/.semantics.objs/byte/semantics.cmo -c -impl src/Semantics.pp.ml)
-> File "src/Semantics.ml", lines 3-4, characters 9-42:
-> 3 | .........{ expression = (Op(Integer(x), Integer(y))); store = s } = 
-> 4 |   {expression = Integer(x + y); store = s}
-> Error (warning 8 [partial-match]): this pattern-matching is not exhaustive.
-> Here is an example of a case that is not matched:
-> {expression=Op
->               (Integer _,
->               (Skip|Boolean _|While (_, _)|If (_, _, _)|Seq (_, _)|Deref _|
->               Assign (_, _)|Op (_, _)));
-> _ }
-> File "src/Semantics.ml", lines 6-7, characters 8-43:
-> 6 | ........{ expression = (Op(Integer(x), Integer(y))); store = s } = 
-> 7 |   {expression = Boolean(x >= y); store = s}
-> Error (warning 8 [partial-match]): this pattern-matching is not exhaustive.
-> Here is an example of a case that is not matched:
-> {expression=Op
->               (Integer _,
->               (Skip|Boolean _|While (_, _)|If (_, _, _)|Seq (_, _)|Deref _|
->               Assign (_, _)|Op (_, _)));
-> _ }
-[2]
-$ (cd _build/default && /Users/ameliang/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.semantics.objs/byte -I src/.semantics.objs/native -I /Users/ameliang/.opam/default/lib/base -I /Users/ameliang/.opam/default/lib/base/base_internalhash_types -I /Users/ameliang/.opam/default/lib/base/caml -I /Users/ameliang/.opam/default/lib/base/md5 -I /Users/ameliang/.opam/default/lib/base/shadow_stdlib -I /Users/ameliang/.opam/default/lib/base_bigstring -I /Users/ameliang/.opam/default/lib/base_quickcheck -I /Users/ameliang/.opam/default/lib/bin_prot -I /Users/ameliang/.opam/default/lib/bin_prot/shape -I /Users/ameliang/.opam/default/lib/cmdliner -I /Users/ameliang/.opam/default/lib/core -I /Users/ameliang/.opam/default/lib/core/error_checking_mutex -I /Users/ameliang/.opam/default/lib/core_kernel -I /Users/ameliang/.opam/default/lib/core_kernel/base_for_tests -I /Users/ameliang/.opam/default/lib/core_kernel/caml_unix -I /Users/ameliang/.opam/default/lib/core_kernel/flags -I /Users/ameliang/.opam/default/lib/core_kernel/version_util -I /Users/ameliang/.opam/default/lib/fieldslib -I /Users/ameliang/.opam/default/lib/jane-street-headers -I /Users/ameliang/.opam/default/lib/ocaml/threads -I /Users/ameliang/.opam/default/lib/parsexp -I /Users/ameliang/.opam/default/lib/ppx_assert/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_bench/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_compare/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_enumerate/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_expect/collector -I /Users/ameliang/.opam/default/lib/ppx_expect/common -I /Users/ameliang/.opam/default/lib/ppx_expect/config -I /Users/ameliang/.opam/default/lib/ppx_expect/config_types -I /Users/ameliang/.opam/default/lib/ppx_hash/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_here/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_inline_test/config -I /Users/ameliang/.opam/default/lib/ppx_inline_test/runtime-lib -I /Users/ameliang/.opam/default/lib/ppx_module_timer/runtime -I /Users/ameliang/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/ameliang/.opam/default/lib/sexplib -I /Users/ameliang/.opam/default/lib/sexplib/unix -I /Users/ameliang/.opam/default/lib/sexplib0 -I /Users/ameliang/.opam/default/lib/spawn -I /Users/ameliang/.opam/default/lib/splittable_random -I /Users/ameliang/.opam/default/lib/stdio -I /Users/ameliang/.opam/default/lib/time_now -I /Users/ameliang/.opam/default/lib/timezone -I /Users/ameliang/.opam/default/lib/typerep -I /Users/ameliang/.opam/default/lib/variantslib -intf-suffix .ml -no-alias-deps -opaque -open Semantics__ -o src/.semantics.objs/native/semantics.cmx -c -impl src/Semantics.pp.ml)
-> File "src/Semantics.ml", lines 3-4, characters 9-42:
-> 3 | .........{ expression = (Op(Integer(x), Integer(y))); store = s } = 
-> 4 |   {expression = Integer(x + y); store = s}
-> Error (warning 8 [partial-match]): this pattern-matching is not exhaustive.
-> Here is an example of a case that is not matched:
-> {expression=Op
->               (Integer _,
->               (Skip|Boolean _|While (_, _)|If (_, _, _)|Seq (_, _)|Deref _|
->               Assign (_, _)|Op (_, _)));
-> _ }
-> File "src/Semantics.ml", lines 6-7, characters 8-43:
-> 6 | ........{ expression = (Op(Integer(x), Integer(y))); store = s } = 
-> 7 |   {expression = Boolean(x >= y); store = s}
-> Error (warning 8 [partial-match]): this pattern-matching is not exhaustive.
-> Here is an example of a case that is not matched:
-> {expression=Op
->               (Integer _,
->               (Skip|Boolean _|While (_, _)|If (_, _, _)|Seq (_, _)|Deref _|
->               Assign (_, _)|Op (_, _)));
-> _ }
-[2]
