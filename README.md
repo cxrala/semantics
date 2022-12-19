@@ -1,0 +1,3 @@
+# semantics
+
+An implementation of L1 (computer science tripos, semantics) in Ocaml. Potential to expand to L2, L3, ...
