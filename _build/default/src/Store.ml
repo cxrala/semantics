@@ -12,14 +12,14 @@ let create_store n =
 let deref store loc =
   let rec deref = function
   | Store([]) -> None
-  | Store((l, n)::xs) -> if l == loc then Some(n) 
+  | Store((l, n)::xs) -> if l = loc then Some(n) 
                           else deref (Store(xs))
   in deref store
 
 let assign (Store(ls)) loc n =
   let rec assign = function
     | [] -> None
-    | (l, _)::xs when l == loc -> Some((l, n)::xs)
+    | (l, _)::xs when l = loc -> Some((l, n)::xs)
     | (l, x)::xs -> match assign xs with
                     | None -> None
                     | Some(xss) -> Some((l, x)::xss)

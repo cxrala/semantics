@@ -27,7 +27,7 @@ let rec reduce (x:Configuration.t):Configuration.t option =
                     | Some((e, s0)) -> Some((Seq(e, e2), s0))
                     | _ -> None)
     (*deref cases*)
-    | Deref(l:Store.loc) -> (match Store.deref s l with
+    | Deref(l) -> (match Store.deref s l with
                           | Some(x) -> Some((Integer(x), s))
                           | _ -> None)
     (*assign cases*)

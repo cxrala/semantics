@@ -25,12 +25,12 @@ let rec infer (gamma:type_env) = function
                       | Some(Int), Some(Int) -> Some(get_type op)
                       | _ -> None)
   | If(e1, e2, e3) -> (match (infer gamma e1, infer gamma e2, infer gamma e3) with
-                      | Some(Bool), Some(x), Some(y) when x == y -> Some(x)
+                      | Some(Bool), Some(x), Some(y) when x = y -> Some(x)
                       | _ -> None)
   | Seq(e1, e2) -> (match (infer gamma e1, infer gamma e2) with
                     | Some(Unit), Some(x) -> Some(x)
                     |_ -> None)
-  | Deref((l:Store.loc)) -> get_t gamma l
+  | Deref(l) -> get_t gamma l
   | Assign(l, n) -> (match (get_t gamma l, infer gamma n) with
                     | Some(Intref), Some(Int) -> Some(Unit)
                     | _ -> None)
