@@ -4,9 +4,6 @@ open Expression
 let rec reduce (x:Configuration.t):Configuration.t option =
   let (expr, s) = x in
   match expr with
-    | Integer(x) -> Some((Integer(x), s))
-    | Boolean(x) -> Some((Boolean(x), s))
-    | Skip -> Some((Skip, s))
     (*op cases*)
     | Op(Integer(x), op, Integer(y)) -> (match op with
                                         | Plus -> Some((Integer(x + y), s)) (*op +*)
@@ -42,3 +39,13 @@ let rec reduce (x:Configuration.t):Configuration.t option =
                         | _ -> None)
     (*while case*)
     | While(e1, e2) -> Some((If(e1, Seq(e2, While(e1, e2)), Skip), s))
+    | _ -> None
+
+let rec reduce_to_val (x:Configuration.t) : Configuration.t option =
+    match x with
+  | (Integer(_), _) -> Some(x)
+  | (Boolean(_), _) -> Some(x)
+  | (Skip, _) -> Some(x)
+  | _ -> (match reduce x with
+        | Some(config) -> reduce_to_val config
+        | None -> None)

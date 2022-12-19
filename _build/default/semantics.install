@@ -38,3 +38,6 @@ libexec: [
 bin: [
   "_build/install/default/bin/semantics"
 ]
+doc: [
+  "_build/install/default/doc/semantics/README.md"
+]
