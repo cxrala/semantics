@@ -27,6 +27,11 @@
      (obj_name semantics__Store)
      (visibility public)
      (impl)
+     (intf))
+    ((name Types)
+     (obj_name semantics__Types)
+     (visibility public)
+     (impl)
      (intf)))
    (alias_module
     (name Semantics__)

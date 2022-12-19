@@ -8,3 +8,7 @@ module Expression = Semantics__Expression
 
 (** @canonical Semantics.Store *)
 module Store = Semantics__Store
+
+
+(** @canonical Semantics.Types *)
+module Types = Semantics__Types

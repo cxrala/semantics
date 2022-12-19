@@ -7,6 +7,8 @@ lib: [
   "_build/install/default/lib/semantics/Semantics.mli"
   "_build/install/default/lib/semantics/Store.ml"
   "_build/install/default/lib/semantics/Store.mli"
+  "_build/install/default/lib/semantics/Types.ml"
+  "_build/install/default/lib/semantics/Types.mli"
   "_build/install/default/lib/semantics/dune-package"
   "_build/install/default/lib/semantics/opam"
   "_build/install/default/lib/semantics/semantics.a"
@@ -31,6 +33,10 @@ lib: [
   "_build/install/default/lib/semantics/semantics__Store.cmt"
   "_build/install/default/lib/semantics/semantics__Store.cmti"
   "_build/install/default/lib/semantics/semantics__Store.cmx"
+  "_build/install/default/lib/semantics/semantics__Types.cmi"
+  "_build/install/default/lib/semantics/semantics__Types.cmt"
+  "_build/install/default/lib/semantics/semantics__Types.cmti"
+  "_build/install/default/lib/semantics/semantics__Types.cmx"
 ]
 libexec: [
   "_build/install/default/lib/semantics/semantics.cmxs"
